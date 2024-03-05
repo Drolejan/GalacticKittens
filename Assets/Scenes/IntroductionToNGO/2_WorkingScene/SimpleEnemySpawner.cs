@@ -57,6 +57,7 @@ public class SimpleEnemySpawner : NetworkBehaviour
 
             var nextPrefabToSpawn = GetNextRandomEnemyPrefabToSpawn();
 
+            //Instanciamos GameObjects en el Servidor ("Todos los clientes ven el server")
             NetworkObjectSpawner.SpawnNewNetworkObject(
                 nextPrefabToSpawn,
                 m_CurrentNewEnemyPosition);
